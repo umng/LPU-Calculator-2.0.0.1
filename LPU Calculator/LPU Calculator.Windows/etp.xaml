@@ -1,0 +1,312 @@
+﻿<Page
+    x:Class="LPU_Calculator.etp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LPU_Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Background="{ThemeResource AppBarItemBackgroundThemeBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock  HorizontalAlignment="Left" Margin="71,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" LineHeight=" 35" Height="42" Width="343" Text="LPU Marks Calculator"/>
+            <Image HorizontalAlignment="Left" Height="48" Margin="10,52,0,0" VerticalAlignment="Top" Width="62" Source=" /assets/Logo.scale-240.png"/>
+            <Grid Margin="15,145,912,9" >
+                <Button x:Name="bt_side_ete" HorizontalAlignment="Left" Margin="10,0,-16,0" VerticalAlignment="Top" Height="88" Width="378" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click">
+                    <Button.ContentTransitions>
+                        <TransitionCollection/>
+                    </Button.ContentTransitions>
+                    <Grid Height="100" Width="328" IsHitTestVisible="False">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="318" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Margin="0,-8,0,0">
+    						<Run Text="ETE - END TERM EXAM"/>
+                        </TextBlock>
+                        <TextBlock  HorizontalAlignment="Right" Margin="0,29,54,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="274" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+    						<Run Text="Marks you need to score in ETE to pass the course/subject"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button x:Name="bt_etp" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Height="87" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_1" Width="378">
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="ETP - END TERM PRACTICAL" Margin="0,-8,0,0"/>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="271" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+    						<Run Text="Marks you need to score in ETP to pass the course/subject"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button HorizontalAlignment="Stretch" Margin="10,178,51,0" VerticalAlignment="Top" Height="86" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_2">
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Margin="0,-8,0,0">
+    						<Run Text="RE-APPEAR - ETE"/>
+                        </TextBlock>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="262" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+    						<Run Text="Marks you need to score in Re-Appear exam to pass the course/subject"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="10,266,-16,0" VerticalAlignment="Top" Height="86" Width="378" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_3" >
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Margin="0,-8,0,0">
+    						<Run Text="RE-APPEAR - ETP"/>
+                        </TextBlock>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="265" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+    						<Run Text="Marks you need to score in Re-Appear practical to pass the course/subject"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="10,353,-16,0" VerticalAlignment="Top" Height="85" Width="378" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_4">
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="ATTENDANCE" Margin="0,-8,0,0"/>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="266" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+    						<Run Text="Attendance needed to seat in the exam to avoid Detainment"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="10,525,-16,0" VerticalAlignment="Top" Height="87" Width="378" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_6" >
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="ABOUT" Margin="0,-8,0,0"/>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="253" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+    						<Run Text="Application information, Publisher, "/>
+    						<Run Text="Contact Support"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="10,439,-16,0" VerticalAlignment="Top" Height="84" Width="378" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_5" >
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="HELP" Margin="0,-8,0,0"/>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="274" Foreground="{ThemeResource AppBarBackgroundThemeBrush}" Text="Provide the right way to use LPU Marks Calculator"/>
+                    </Grid>
+                </Button>
+            </Grid>
+            <TextBlock Margin="409,41,49,0" TextWrapping="Wrap" FontSize="64" LineHeight=" 35" Height="95" Width="908" Opacity="0.7" VerticalAlignment="Top" HorizontalAlignment="Left" Text="         ETP-End Term Practical">
+            </TextBlock>
+            <Ellipse Fill="{ThemeResource AppBarItemDisabledForegroundThemeBrush}" HorizontalAlignment="Left" Height="12" Margin="434,137,0,0" Stroke="Black" VerticalAlignment="Top" Width="901"/>
+            <Button Content="Home" HorizontalAlignment="Left" Margin="-3,102,0,0" VerticalAlignment="Top" Background="#FFDB7926" BorderBrush="{ThemeResource AppBarItemBackgroundThemeBrush}" Height="41" Width="78" Click="Button_Click_7"/>
+            <ScrollViewer Height="591" Margin="459,167,451,0" VerticalAlignment="Top" BorderBrush="#FFFD9433" Background="Transparent">
+                <Grid Height="1162">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Enter marks here" VerticalAlignment="Top" Width="380" Height="33" FontSize="24" Margin="10,0,0,0"/>
+                    <Rectangle Fill="#FFFE9733" Height="40" Stroke="#FFFE9733" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400" Margin="0,38,0,0"/>
+                    <TextBlock Margin="10,38,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontSize="29.333">
+            			<Run Text="PRACTICALS"/>
+                    </TextBlock>
+                    <TextBox x:Name="tb_p1" HorizontalAlignment="Left" Margin="284,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" PlaceholderText="50" TabIndex="0" MaxLength="2" IsTextPredictionEnabled="False"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,83,0,0" TextWrapping="Wrap" Text="All the marks for practical evaluaton are out of 50." VerticalAlignment="Top" FontSize="17.333" Opacity="0.5"/>
+                    <Rectangle Fill="#FFFE9733" Height="40" Stroke="#FFFE9733" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400" Margin="0,613,0,0"/>
+                    <TextBlock Margin="10,613,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontSize="29.333">
+            			<Run Text="MTP-I         "/>
+            			<Run FontWeight="Thin" FontSize="21.333" Text="MID TERM PRACTICAL"/>
+                    </TextBlock>
+                    <TextBox x:Name="tb_mtp1" HorizontalAlignment="Left" Margin="85,674,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" TabIndex="3" PlaceholderText="30" MaxLength="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="151,686,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Opacity="0.5">
+            			<Run Text="out of 30"/>
+                    </TextBlock>
+                    <Rectangle Fill="#FFFE9733" Height="40" Stroke="#FFFE9733" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400" Margin="0,837,0,0"/>
+                    <TextBlock Margin="10,837,10,0" TextWrapping="Wrap" Text="ATTENDANCE %" VerticalAlignment="Top" Height="40" FontSize="29.333"/>
+                    <TextBox x:Name="tb_atd" HorizontalAlignment="Left" Margin="85,898,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" TabIndex="4" PlaceholderText="100" MaxLength="3"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="151,910,0,0" TextWrapping="Wrap" Text="out of 100" VerticalAlignment="Top" FontSize="21.333" Opacity="0.5"/>
+                    <Rectangle Fill="#FFFE9733" Height="40" Stroke="#FFFE9733" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400" Margin="0,38,0,0"/>
+                    <TextBlock Margin="10,38,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontSize="29.333">
+            			<Run Text="PRACTICALS"/>
+                    </TextBlock>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="28.75,115.79,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="150.5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="186.5,116,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="41.75" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18">
+            			<Run Text="PRACTICAL NO."/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="206,115,0,0" TextWrapping="Wrap" Text="I" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="8"/>
+                    <TextBox x:Name="tb_p2" HorizontalAlignment="Left" Margin="284,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" PlaceholderText="50" TabIndex="0" MaxLength="2" IsTextPredictionEnabled="False"/>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="28.75,164.54,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="150.5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="186.5,164.75,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="41.75" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18">
+            			<Run Text="PRACTICAL NO."/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="206,164,0,0" TextWrapping="Wrap" Text="II" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="36"/>
+                    <TextBox x:Name="tb_p3" HorizontalAlignment="Left" Margin="284,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" PlaceholderText="50" TabIndex="0" MaxLength="2" IsTextPredictionEnabled="False"/>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="28.75,213.29,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="150.5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="186.5,213.5,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="41.75" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18">
+            			<Run Text="PRACTICAL NO."/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="204,213,0,0" TextWrapping="Wrap" Text="III" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="75"/>
+                    <TextBox x:Name="tb_p4" HorizontalAlignment="Left" Margin="284,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" PlaceholderText="50" TabIndex="0" MaxLength="2" IsTextPredictionEnabled="False"/>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="28.75,264.54,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="150.5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="186.5,264.75,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="41.75" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18">
+            			<Run Text="PRACTICAL NO."/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="204,264,0,0" TextWrapping="Wrap" Text="IV" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="52"/>
+                    <TextBox x:Name="tb_p5" HorizontalAlignment="Left" Margin="284,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" PlaceholderText="50" TabIndex="0" MaxLength="2" IsTextPredictionEnabled="False"/>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="28.75,313.29,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="150.5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="186.5,313.5,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="41.75" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18">
+            			<Run Text="PRACTICAL NO."/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="204,313,0,0" TextWrapping="Wrap" Text="V" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="52"/>
+                    <TextBox x:Name="tb_p6" HorizontalAlignment="Left" Margin="284,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" PlaceholderText="50" TabIndex="0" MaxLength="2" IsTextPredictionEnabled="False"/>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="28.75,364.54,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="150.5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="186.5,364.75,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="41.75" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18">
+            			<Run Text="PRACTICAL NO."/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="202,364,0,0" TextWrapping="Wrap" Text="VI" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="54"/>
+                    <TextBox x:Name="tb_p7" HorizontalAlignment="Left" Margin="284,412,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" PlaceholderText="50" TabIndex="0" MaxLength="2" IsTextPredictionEnabled="False"/>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="28.75,417.04,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="150.5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="186.5,417.25,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="41.75" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18">
+            			<Run Text="PRACTICAL NO."/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="200,416,0,0" TextWrapping="Wrap" Text="VII" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="56"/>
+                    <TextBox x:Name="tb_p8" HorizontalAlignment="Left" Margin="284,462,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" PlaceholderText="50" TabIndex="0" MaxLength="2" IsTextPredictionEnabled="False"/>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="28.75,467.04,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="150.5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="186.5,467.25,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="41.75" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,469,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18">
+            			<Run Text="PRACTICAL NO."/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="192,467,0,0" TextWrapping="Wrap" Text="VIII" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="41"/>
+                    <TextBox x:Name="tb_p9" HorizontalAlignment="Left" Margin="284,512,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" PlaceholderText="50" TabIndex="0" MaxLength="2" IsTextPredictionEnabled="False"/>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="28.75,517.04,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="150.5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="186.5,517.25,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="41.75" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,519,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18">
+            			<Run Text="PRACTICAL NO."/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="202,516,0,0" TextWrapping="Wrap" Text="IX" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="54"/>
+                    <TextBox x:Name="tb_p10" HorizontalAlignment="Left" Margin="284,560,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" PlaceholderText="50" TabIndex="0" MaxLength="2" IsTextPredictionEnabled="False"/>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="28.75,564.79,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="150.5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="28" Margin="186.5,565,0,0" Stroke="#FFFE9733" VerticalAlignment="Top" Width="41.75" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.3">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform SkewX="22.62" TranslateX="5.833"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,567,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18">
+            			<Run Text="PRACTICAL NO."/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="204,564,0,0" TextWrapping="Wrap" Text="X" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="52"/>
+                    <Button x:Name="bt_reset" Content="Reset*" HorizontalAlignment="Left" Margin="256,955,0,0" VerticalAlignment="Top" Height="53" BorderThickness="2.5,2.5,30,2.5" Width="147" Click="bt_reset_Click" FontSize="21.333"/>
+                    <Rectangle Fill="{ThemeResource AppBarItemDisabledForegroundThemeBrush}" Height="4" Margin="10,949,10,0" Stroke="Black" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="11,978,0,64" TextWrapping="Wrap" FontSize="16" Opacity="0.5">
+            			<Run Text="* reset all the fields on this page"/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,1010,0,-101" TextWrapping="Wrap" FontSize="16" Opacity="0.5" Width="380">
+            			<Run Text="Do not enter decimal( . ) values, e.g."/>
+            			<Run Text=" 5.6, .5 , 5. ,etc."/>
+            			<LineBreak/>
+            			<Run Text="Make sure you have filled all the fields. "/>
+            			<LineBreak/>
+            			<Run Text="Enter Attendance % , not the marks associated."/>
+            			<LineBreak/>
+            			<Run/>
+            			<LineBreak/>
+            			<Run Text="For more, "/>
+            			<Run Text="Go to"/>
+            			<LineBreak/>
+            			<Run Text="                                             "/>
+            			<LineBreak/>
+            			<Run/>
+            			<Span>
+            				<Run Text="©One Corporation, 2014"/>
+            			</Span>
+            			<LineBreak/>
+            			<Run/>
+                    </TextBlock>
+                    <HyperlinkButton x:Name="tb_help" Content="Help" HorizontalAlignment="Left" Margin="115,1073,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="{ThemeResource ButtonPressedBackgroundThemeBrush}" Click="tb_help_Click" />
+                    <Rectangle Fill="#FFFE9733" Height="40" Stroke="#FFFE9733" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400" Margin="0,724,0,0"/>
+                    <TextBlock Margin="10,724,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontSize="29.333">
+            			<Run Text="MTP-II        "/>
+            			<Run FontWeight="Thin" FontSize="21.333" Text="MID TERM PRACTICAL"/>
+                    </TextBlock>
+                    <TextBox x:Name="tb_mtp2" HorizontalAlignment="Left" Margin="85,785,0,0" TextWrapping="Wrap" VerticalAlignment="Top" InputScope="Number" TabIndex="3" PlaceholderText="30" MaxLength="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="151,797,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Opacity="0.5">
+            			<Run Text="out of 30"/>
+                    </TextBlock>
+
+                </Grid>
+            </ScrollViewer>
+            <Rectangle x:Name="rec_ban" Fill="{ThemeResource AppBarBackgroundThemeBrush}" HorizontalAlignment="Left" Height="84" Margin="970,295,0,0" RadiusY="25" RadiusX="25" Stroke="Black" VerticalAlignment="Top" Width="303" Opacity="0"/>
+            <Button x:Name="bt_calculate" Content="Calculate" HorizontalAlignment="Left" Margin="1017,182,0,0" VerticalAlignment="Top" FontSize="26.667" Click="bt_calculate_Click" BorderThickness="2.5,2.5,30,2.5" Width="186" Height="61"/>
+            <TextBlock x:Name="tb_ban" HorizontalAlignment="Left" Margin="1005,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="257" FontSize="53.333" FontWeight="Bold" Foreground="{ThemeResource ButtonPressedBackgroundThemeBrush}" Opacity="0.5"/>
+            <Rectangle x:Name="rec_result2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="279" Margin="970,369,0,0" Stroke="Black" VerticalAlignment="Top" Width="303" RadiusY="25" RadiusX="25" Opacity="0"/>
+            <Rectangle x:Name="rec_result1" Fill="{ThemeResource AppBarBackgroundThemeBrush}" HorizontalAlignment="Left" Height="260" Margin="984,379,0,0" Stroke="Black" VerticalAlignment="Top" Width="278" RadiusY="25" RadiusX="25" Opacity="0"/>
+            <TextBlock x:Name="tb_result" HorizontalAlignment="Left" Margin="1005,396,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="229" Width="237" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" FontSize="160" FontFamily="Lucida Handwriting" FontWeight="Bold"/>
+        </Grid>
+
+    </Grid>
+</Page>

@@ -1,0 +1,72 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LPU_Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    x:Class="LPU_Calculator.help"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Grid>
+		<Rectangle Fill="{ThemeResource AppBarItemForegroundThemeBrush}" Height="8" Margin="10,118,10,0" Stroke="Black" VerticalAlignment="Top"/>
+		<Image HorizontalAlignment="Left" Height="83" Margin="10,40,0,0" VerticalAlignment="Top" Width="90" Source=" /assets/Logo.scale-240.png"/>
+		<Rectangle Fill="#FFFE9733" HorizontalAlignment="Left" Height="73" Margin="96,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="294" Opacity="0.5"/>
+		<TextBlock Margin="98,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="57" Width="290" FontSize="32" HorizontalAlignment="Left" Padding="10,0,0,0" LineHeight="35" Text="HELP"/>
+		<TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="LPU MARKS CALCULATOR" VerticalAlignment="Top" Opacity="80" FontSize="18" Width="378"/>
+		<ScrollViewer HorizontalAlignment="Left" Height="445" Margin="10,185,0,0" VerticalAlignment="Top" Width="380">
+			<Grid Height="1313" Width="376">
+				<Rectangle Fill="{ThemeResource AppBarItemForegroundThemeBrush}" HorizontalAlignment="Left" Height="63" Margin="0,2,0,0" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" VerticalAlignment="Top" Width="376" Opacity="0.1"/>
+				<TextBlock HorizontalAlignment="Left" Margin="10,2,0,0" TextWrapping="Wrap" Text="1. Do not use decimal(.) values as an input, For example, 5., .4, 5.3, etc." VerticalAlignment="Top" Height="63" Width="356" FontSize="21.333" LineHeight="25"/>
+				<Rectangle Fill="{ThemeResource AppBarItemForegroundThemeBrush}" HorizontalAlignment="Left" Height="63" Margin="0,70,0,0" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" VerticalAlignment="Top" Width="376" Opacity="0.1"/>
+				<TextBlock HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="2. Make sure that you have filled all the fields." VerticalAlignment="Top" Height="63" Width="356" FontSize="21.333" LineHeight="25"/>
+				<Rectangle Fill="{ThemeResource AppBarItemForegroundThemeBrush}" HorizontalAlignment="Left" Height="64" Margin="0,138,0,0" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" VerticalAlignment="Top" Width="376" Opacity="0.1"/>
+				<TextBlock HorizontalAlignment="Left" Margin="10,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="356" FontSize="21.333" LineHeight="25">
+					<Run Text="3.Only Positive(+) Integers are allowed to be filled as the input."/>
+				</TextBlock>
+				<Rectangle Fill="{ThemeResource AppBarItemForegroundThemeBrush}" HorizontalAlignment="Left" Height="305" Margin="0,207,0,0" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" VerticalAlignment="Top" Width="376" Opacity="0.1"/>
+				<TextBlock HorizontalAlignment="Left" Margin="10,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="305" Width="356" FontSize="21.333" LineHeight="25">
+					<Run Text="4. CA stands for Continuous Assessment and it can be Class Test, Class Participation, Term Paper Speaking Evaluation, Design Problem Group Discussion OR anything else. In some cases, like in the case of Class Participation, if you have to consider more Tests or evaluation marks as a single CA as per the IP(Instruction Plan), then its your responsibility to convert that to out of 30. "/>
+				</TextBlock>
+				<Rectangle Fill="{ThemeResource AppBarItemForegroundThemeBrush}" HorizontalAlignment="Left" Height="362" Margin="0,517,0,0" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" VerticalAlignment="Top" Width="376" Opacity="0.1"/>
+				<TextBlock HorizontalAlignment="Left" Margin="10,517,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="362" Width="356" LineHeight="25" FontSize="21.333">
+					<Run Text="5. Enter attendance percentage(%) for calculating ETE, ETP, and Re-Appear exam marks. You do not have to enter marks, For example 4 Marks for attendance between 85 to 90."/>
+					<LineBreak/>
+					<Run Text="The calculator will automatically consider the marks allotted for the particular range of  Attendance as shown below:"/>
+					<LineBreak/>
+					<Run Text="    90% -100%  = 5 Marks"/>
+					<LineBreak/>
+					<Run Text="    85% - 90 % = 4 Marks"/>
+					<LineBreak/>
+					<Run Text="    80% - 85 % = 3 Marks"/>
+					<LineBreak/>
+					<Run Text="    75% - 80 % = 2 Marks"/>
+					<LineBreak/>
+					<Run Text="    00 % -75 % = 0 Marks"/>
+					<LineBreak/>
+					<Run/>
+				</TextBlock>
+				<TextBlock HorizontalAlignment="Left" Margin="10,1289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.5">
+					<Run FontSize="16" Text="©One Corporation, 2014"/>
+				</TextBlock>
+				<Rectangle Fill="{ThemeResource AppBarItemForegroundThemeBrush}" HorizontalAlignment="Left" Height="114" Margin="0,884,0,0" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" VerticalAlignment="Top" Width="376" Opacity="0.1"/>
+				<TextBlock HorizontalAlignment="Left" Margin="10,884,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="114" Width="356" LineHeight="25" FontSize="21.333">
+					<Run Text="6. If you have left or missed some fields to be filled , then that will be considered as a NULL value OR Zero Marks by default."/>
+				</TextBlock>
+				<Rectangle Fill="{ThemeResource AppBarItemForegroundThemeBrush}" HorizontalAlignment="Left" Height="138" Margin="0,1003,0,0" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" VerticalAlignment="Top" Width="376" Opacity="0.1"/>
+				<TextBlock HorizontalAlignment="Left" Margin="10,1003,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="138" Width="356" LineHeight="25" FontSize="21.333">
+					<Run Text="7. You need to enter any 2 best CA's marks, if you are entering all CA's marks in the given fields then best two of them will be considered for the calculations."/>
+				</TextBlock>
+				<Rectangle Fill="{ThemeResource AppBarItemForegroundThemeBrush}" HorizontalAlignment="Left" Height="138" Margin="0,1146,0,0" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" VerticalAlignment="Top" Width="376" Opacity="0.1"/>
+				<TextBlock HorizontalAlignment="Left" Margin="10,1146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="138" Width="356" LineHeight="25" FontSize="21.333">
+					<Run Text="8. For Practical Evaluations, Best 8 practical will be considered for the calculations, if you are entering marks for all 10 practical then best 8 will be considered only."/>
+				</TextBlock>
+			</Grid>
+		</ScrollViewer>
+		<AppBarButton HorizontalAlignment="Left" Margin="4,130,0,0" VerticalAlignment="Top" Height="57" Width="66" Icon="Back" Click="AppBarButton_Click"/>
+
+        <UI:AdControl x:Name="ad_help" AutoRefreshIntervalInSeconds="60" ApplicationId="68419439-425d-43ef-8d7b-9ea50d4f3d44" AdUnitId="10804447" HorizontalAlignment="Left" Height="50" IsAutoRefreshEnabled="True" Margin="70,133,0,0" VerticalAlignment="Top" Width="320"/>
+
+	</Grid>
+</Page>

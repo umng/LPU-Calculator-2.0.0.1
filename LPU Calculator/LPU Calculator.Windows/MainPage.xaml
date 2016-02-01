@@ -1,0 +1,99 @@
+﻿<Page
+    x:Class="LPU_Calculator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LPU_Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Margin="2,0,-2,0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock  HorizontalAlignment="Left" Margin="71,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" LineHeight=" 35" Height="42" Width="343" Text="LPU Marks Calculator">
+            </TextBlock>
+            <Image HorizontalAlignment="Left" Height="48" Margin="10,52,0,0" VerticalAlignment="Top" Width="62" Source=" /assets/Logo.scale-240.png"/>
+            <Grid Margin="15,145,917,9" >
+                <Button x:Name="bt_side_ete" HorizontalAlignment="Left" Margin="10,0,-16,0" VerticalAlignment="Top" Height="88" Width="378" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click">
+                    <Button.ContentTransitions>
+                        <TransitionCollection/>
+                    </Button.ContentTransitions>
+                    <Grid Height="100" Width="328" IsHitTestVisible="False">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="318" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Margin="0,-8,0,0">
+            				<Run Text="ETE - END TERM EXAM"/>
+                        </TextBlock>
+                        <TextBlock  HorizontalAlignment="Right" Margin="0,29,54,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="274" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+            				<Run Text="Marks you need to score in ETE to pass the course/subject"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Height="87" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_1" Width="378">
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="ETP - END TERM PRACTICAL" Margin="0,-8,0,0"/>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="271" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+            				<Run Text="Marks you need to score in ETP to pass the course/subject"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="10,178,46,0" VerticalAlignment="Top" Height="86" Width="378" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_2">
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Margin="0,-8,0,0">
+            				<Run Text="RE-APPEAR - ETE"/>
+                        </TextBlock>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="262" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+            				<Run Text="Marks you need to score in Re-Appear exam to pass the course/subject"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="10,266,-16,0" VerticalAlignment="Top" Height="86" Width="378" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_3" >
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Margin="0,-8,0,0">
+            				<Run Text="RE-APPEAR - ETP"/>
+                        </TextBlock>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="265" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+            				<Run Text="Marks you need to score in Re-Appear practical to pass the course/subject"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="10,353,-16,0" VerticalAlignment="Top" Height="85" Width="378" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_4">
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="ATTENDANCE" Margin="0,-8,0,0"/>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="266" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+            				<Run Text="Attendance needed to seat in the exam to avoid Detainment"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="10,525,-16,0" VerticalAlignment="Top" Height="87" Width="378" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_6" >
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="ABOUT" Margin="0,-8,0,0"/>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="253" Foreground="{ThemeResource AppBarBackgroundThemeBrush}">
+            				<Run Text="Application information, Publisher, "/>
+            				<Run Text="Contact Support"/>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="10,439,-16,0" VerticalAlignment="Top" Height="84" Width="378" Background="#FFDB7926" BorderBrush="#FFDB7926" Click="Button_Click_5" >
+                    <Grid Height="100" Width="328">
+                        <TextBlock FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="328" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="HELP" Margin="0,-8,0,0"/>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="274" Foreground="{ThemeResource AppBarBackgroundThemeBrush}" Text="Provide the right way to use LPU Marks Calculator"/>
+                    </Grid>
+                </Button>
+            </Grid>
+            <TextBlock Margin="409,41,49,0" TextWrapping="Wrap" FontSize="64" LineHeight=" 35" Height="95" Width="908" Opacity="0.7" VerticalAlignment="Top" HorizontalAlignment="Left">
+            	<Run Text="                      "/>
+            	<Run Text="Home"/>
+            </TextBlock>
+            <Ellipse Fill="{ThemeResource AppBarItemDisabledForegroundThemeBrush}" HorizontalAlignment="Left" Height="12" Margin="434,137,0,0" Stroke="Black" VerticalAlignment="Top" Width="901"/>
+            <Button Content="Home" HorizontalAlignment="Left" Margin="-3,102,0,0" VerticalAlignment="Top" Background="#FFDB7926" BorderBrush="{ThemeResource AppBarItemBackgroundThemeBrush}" Height="41" Width="78" Click="Button_Click_7"/>
+            <Grid HorizontalAlignment="Left" Height="670" Margin="584,149,0,-51" VerticalAlignment="Top" Width="616" Grid.RowSpan="2">
+            	<Grid.Background>
+            		<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Logo.scale-240.png"/>
+            	</Grid.Background>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
